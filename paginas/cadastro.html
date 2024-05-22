@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/global.css">
+    <link rel="stylesheet" href="../estilos/cadastro.css">
+    <link rel="icon" type="imagem/xcon" href="../imagens/logo.jpeg">
+
+    <title>Cadastro - NutriSafe</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html"><img id="logoNavBar" src="../imagens/logo-remove-bg.png" alt="Logo NutriSafe"></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="containerContent">
+            <div class="topForm">
+                <h2>Cadastre-se</h2>
+                <p>É rápido e fácil.</p>
+            </div>
+            <div class="formContainer">
+                <form action="cad.php" method="POST">
+
+                    <input id="fullNameForm" placeholder="Nome completo" type="text">
+
+                    <input id="emailForm" placeholder="Email" type="email">
+
+                    <input id="passForm" placeholder="Senha" type="password">
+
+                    <input id="passConfirmForm" placeholder="Confirme a senha" type="password">
+
+                </form>
+            </div>
+            <div class="bottomForm">
+                <button type="submit" class="firstBtn"><a href="cadastro2.html"><img src="../imagens/arrow-right.svg" alt="Botão de próximo"></a></button>
+                
+                <p>Possui conta? <a href="/login.html">Conecte agora</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
