@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos/global.css">
-    <link rel="stylesheet" href="../estilos/cadastro.css">
+    <link rel="stylesheet" href="../estilos/cadastro2.css">
     <link rel="icon" type="imagem/xcon" href="../imagens/logo.jpeg">
 
     <title>Cadastro - NutriSafe</title>
@@ -23,24 +23,109 @@
             <div class="topForm">
                 <h2>Selecione suas restrições</h2>
                 <p>Já está acabando.</p>
-            </div>
+            </div>  
             <div class="formContainer">
                 <form action="cad.php" method="POST">
                     
-                    <input value="Leite" id="leiteOption" type="checkbox">
+                    <div class="inputBox">
+                        <input value="leite" id="leiteOption" type="checkbox">
+                        <label for="leiteOption">Leite</label>
+                    </div>
 
-                    <input id="emailForm" type="checkbox">
+                    <div class="inputBox">
+                        <input type="checkbox" name="glutenOption" id="glutenOption" value="gluten">
+                        <label for="glutenOption">Glúten</label>
+                    </div>
 
-                    <input id="passForm" type="checkbox">
+                    <div class="inputBox">
+                        <input type="checkbox" name="ovoOption" id="ovoOption" value="ovo">
+                        <label for="ovoOption">Ovo</label>
+                    </div>
 
-                    <input id="passConfirmForm" type="checkbox">
+                    <div class="inputBox">
+                        <input type="checkbox" name="sojaOption" id="sojaOption" value="soja">
+                        <label for="sojaOption">Soja</label>
+                    </div>
 
+                    <div class="inputBox">
+                        <input type="checkbox" name="amendoimOption" id="amendoimOption" value="amendoim">
+                        <label for="amendoimOption">Amendoim</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="checkbox" name="peixeOption" id="peixeOption" value="peixe">
+                        <label for="peixeOption">Peixes</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="checkbox" name="castanhaOption" id="castanhaOption" value="castanha">
+                        <label for="castanhaOption">Castanhas</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="checkbox" name="coranteOption" id="coranteOption" value="corante">
+                        <label for="coranteOption">Corante</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="checkbox" name="sojaOption" id="sojaOption" value="soja">
+                        <label for="sojaOption">Soja</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="checkbox" name="amendoimOption" id="amendoimOption" value="amendoim">
+                        <label for="amendoimOption">Amendoim</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="checkbox" name="peixeOption" id="peixeOption" value="peixe">
+                        <label for="peixeOption">Peixes</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="checkbox" name="castanhaOption" id="castanhaOption" value="castanha">
+                        <label for="castanhaOption">Castanhas</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="checkbox" name="coranteOption" id="coranteOption" value="corante">
+                        <label for="coranteOption">Corante</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="checkbox" name="peixeOption" id="peixeOption" value="peixe">
+                        <label for="peixeOption">Peixes</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="checkbox" name="castanhaOption" id="castanhaOption" value="castanha">
+                        <label for="castanhaOption">Castanhas</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="checkbox" name="coranteOption" id="coranteOption" value="corante">
+                        <label for="coranteOption">Corante</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="checkbox" name="peixeOption" id="peixeOption" value="peixe">
+                        <label for="peixeOption">Peixes</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="checkbox" name="castanhaOption" id="castanhaOption" value="castanha">
+                        <label for="castanhaOption">Castanhas</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="checkbox" name="coranteOption" id="coranteOption" value="corante">
+                        <label for="coranteOption">Corante</label>
+                    </div>
                 </form>
             </div>
             <div class="bottomForm">
-                <button type="submit" class="firstBtn"><img src="../imagens/arrow-right.svg" alt="Botão de próximo"></button>
+
+                <button type="submit" class="firstBtn">Salvar</button>
                 
-                <p>Possui conta? <a href="/login.html">Conecte agora</a></p>
+                <p>Continuar depois? <a href="/login.html">Conecte agora</a></p>
             </div>
         </div>
     </main>

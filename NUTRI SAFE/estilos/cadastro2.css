@@ -17,7 +17,6 @@ main {
 .containerContent {
     display: flex;
     flex-flow: column nowrap;
-    
     /* height: 80vh;
     width: 50vw; */
     gap: 1.5rem;
@@ -30,33 +29,38 @@ main {
     margin-bottom: 1rem;
 
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .formContainer form {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
     gap: 1.5rem;
+
+    max-width: 75vw;
 }
 
-.formContainer input{
+.inputBox {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.3rem;
 
-    border: none;
-    min-width: 25vw;
-    height: 5vh;
-    border-radius: 5px;
-    padding: 4px;
+    font-size: 1.2rem;
+    color: #fff;
+    height: 3vh;
+    
+    /* background-color: aqua; */
+}
 
-    background-color: var(--background-input);
-    color: #000;
-    font-weight: 500;
-    font-size: 1rem;
+.inputBox input {
+    min-width: 3.5vw;
 }
 
 .bottomForm {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
@@ -79,62 +83,70 @@ main {
 
 .firstBtn {
     background-color: transparent;
-    border: 2px solid #fff;
-    /* color: #fff;
+    border: none;
+    color: #fff;
     font-weight: 900;
-    font-size: 2rem; */
+    font-size: 1.4rem;
 
-    /* min-width: 5vw;
-    height: auto; */
+    min-width: 5vw;
+    height: auto; 
 
     border-radius: 5px;
+    padding: 0.5rem;
 }
-.firstBtn img {
-    max-width: 8vw;
-    max-height: 7vh;
+
+.secondBtn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 900;
+    font-size: 2rem;
+
+    min-width: 5vw;
+    height: auto; 
+
+    border-radius: 5px;
+    padding: 0.5rem;
 }
 
 .firstBtn:hover {
-    background-color: var(--background-input);
-    /* background-color: #fff; */
+    border: 1px solid #fff;
+    box-shadow: 1px 1px;
 }
 
 @media (max-width: 1200px) {
-    .formContainer input {
-        width: 50vw;
-    }
     .firstBtn img {
         max-width: 9vw;
         max-height: 7vh;
     }
+    .formContainer form {
+        max-width: 80vw;
+    }
 }
 
 @media (max-width: 750px) {
-    .formContainer input {
-        width: 60vw;
-    }
     .firstBtn img {
         max-width: 11vw;
         height: 8vh;
     }
+    .formContainer form {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 500px) {
-    .formContainer input {
-        width: 75vw;
-    }
     .firstBtn img {
         max-width: 15vw;
         height: 6vh;
     }
 }
 
-@media (max-width: 400) {
-    .formContainer input {
-        width: 75vw;
-    }
+@media (max-width: 400px) {
     .firstBtn img {
         max-width: 14vw;
         height: 8vh;
+    }
+    .inputBox input {
+        min-width: 4vw;
     }
 }
