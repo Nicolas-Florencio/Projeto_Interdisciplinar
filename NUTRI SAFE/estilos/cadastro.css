@@ -6,6 +6,7 @@ main {
 }
 .navbar {
     display: flex;
+    flex: 1;
     align-items: flex-start;
     justify-content: flex-start;
     max-height: 15vh;
