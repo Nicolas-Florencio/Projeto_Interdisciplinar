@@ -1,0 +1,131 @@
+body
+{
+    background-color: #004702;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo,img 
+{
+    width: 17em;
+    margin-top: 2.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5em;
+}
+
+h1
+{
+    color: aliceblue;
+    text-align: center;
+}
+
+.row
+{
+    margin: 3em;
+}
+
+.inputs
+{
+    border-radius: 14px;
+    height: 2.8em;
+    margin: 0 auto;
+    box-shadow: 2.5px 2.5px 4px #000000;
+    border: 2px rgba(255, 255, 255, 0);
+    background-color: #d8d5d5;
+}
+
+#botaoCentro
+{
+    text-align: center;
+}
+
+#botaoEntrar
+{
+    width: 8.5em;
+    height: 3em;
+    border-radius: 12px;
+    background-color: #007507;
+    color: aliceblue;
+    font-size: 1.2em;
+    border: 2px solid black;
+    box-shadow: 1px 3px  #000000dd;
+    text-shadow: 1.5px 2.2px 5px #194112;
+}
+
+#botaoEntrar a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#botaoEntrar a:hover
+{
+    color: #78f39d;
+}
+
+#Npc
+{
+    color: aliceblue;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+#Cadastre
+{
+    color: #F9EF9A;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+#Cadastre a
+{
+    color: #F9EF9A;
+    text-decoration: none;
+}
+
+#Cadastre a:hover
+{
+    color: #029c1c;
+}
+
+@media (max-width: 768px)
+{
+    #logo,img
+    {
+        width: 12em;
+        margin-bottom: 1em;
+        margin-top: 2em;
+    }
+
+    #botaoEntrar
+    {
+        width: 6em;
+        height: 2.4em;
+        font-size: 1.2em;
+    }
+
+    .inputs
+    {
+        height: 2.5em;
+        border-radius: 11px;
+    }
+
+    #Npc
+    {
+        font-size: 0.9em;
+    }
+
+        #Cadastre
+    {
+        
+        font-size: 1em;
+        
+    }
+
+    ul
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -54,6 +54,11 @@ main {
     /* background-color: aqua; */
 }
 
+legend
+{
+    color: aliceblue;
+}
+
 .inputBox input {
     min-width: 3.5vw;
 }
@@ -82,8 +87,8 @@ main {
 }
 
 .firstBtn {
-    background-color: transparent;
-    border: none;
+    background-color: #007507;
+    border: 2px solid #000;
     color: #fff;
     font-weight: 900;
     font-size: 1.4rem;
@@ -112,6 +117,11 @@ main {
 .firstBtn:hover {
     border: 1px solid #fff;
     box-shadow: 1px 1px;
+}
+
+#conecte
+{
+    color: #F9EF9A;
 }
 
 @media (max-width: 1200px) {

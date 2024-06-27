@@ -100,6 +100,11 @@ main {
     /* background-color: #fff; */
 }
 
+#conecte 
+{
+    color: #F9EF9A;
+}
+
 @media (max-width: 1200px) {
     .formContainer input {
         width: 50vw;

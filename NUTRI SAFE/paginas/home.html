@@ -6,17 +6,28 @@
     <title>Home</title>
     <link rel="icon" type="imagem/xcon" href="../imagens/logo.jpeg">
     <link rel="stylesheet" href="../estilos/home.css" type="text/css">
-    
 </head>
-<body>
+<body id="container">
     <header>
         <nav id="barranavegacao">
+            
             <a href="#">
                 <img src="../imagens/Logo Nutri.png" alt="Logo" id="logo">
             </a>
-            <input type="text" name="barradepesquisa" id="barrapesquisa">
-            <img src="/imagens/perfil.png" id="ftperfil">
+                <input type="text" name="barradepesquisa" id="barrapesquisa" placeholder="Digite o Nome do Produto">
+            
+                    <div id="mySidebar" class="sidebar">
+                        <a href="#">Usuário</a>
+                        <a href="#">Favoritos</a>
+                        <a href="#">Sair</a>
+                    </div>
+              
+                        <div id="main">
+                            <button class="openbtn" onclick="toggleNav()">
+                                <img src="/imagens/perfil.png" id="ftperfil"></button>  
+                        </div>
         </nav>
+            
             <div id="navAlim">
                 <ul>
                     <li><a href="">Sem ovo</a></li>
@@ -26,20 +37,23 @@
             </div>
     </header>
     
-    <main>
-        <img src="/imagens/image 2.jpg" alt="Imagem de Alimentos Saudaveis" id="imgAlims">
-            <h1>Escanear Produto</h1>
-                <div id="opcoesLeitura">
-                    <img src="/imagens/qr-scan.png" alt="QR Code" id="qrcode">
-                    <img src="/imagens/barra (2).png" alt="barra" id="barra">
-                    <img src="/imagens/barcode.png" alt="Codigo de Barras" id="barcode">
-                </div>
-    </main>
+        <main>
+            <img src="/imagens/image 2.jpg" alt="Imagem de Alimentos Saudaveis" id="imgAlims">
+                
+                <h1>Escanear Produto</h1>
+                    
+                    <div id="opcoesLeitura">
+                        <img src="/imagens/qr-scan.png" alt="QR Code" id="qrcode">
+                        <img src="/imagens/barra (2).png" alt="barra" id="barra">
+                        <img src="/imagens/barcode.png" alt="Codigo de Barras" id="barcode">
+                    </div>
+        </main>
 
-    <footer>
-        <div id="direitos"><strong>Todos os Direitos Reservados</strong></div>
-        <strong>emailficticio@outlook.com</strong>
-    </footer>
+            <footer>
+                <div id="direitos"><strong>Todos os Direitos Reservados</strong></div>
+                <strong>emailficticio@outlook.com</strong>
+            </footer>
     
+        <script type="text/javascript" src="/script.js"></script>
 </body>
 </html>
