@@ -17,7 +17,7 @@ Essa versão serve como a base para as próximas implementações e atualizaçõ
 
 > **Observação**: A versão 0.0 é a base inicial e pode conter alterações significativas em versões subsequentes à medida que o projeto se desenvolve.
 
-# Projeto NUTRISAFE
+---
 
 ## Versão 1.0 - Primeira Atualização
 
