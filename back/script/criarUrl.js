@@ -1,5 +1,5 @@
 function criarUrl(url) {
-    let urlPadrao = 'http://localhost/Projeto%20Interdisiplinar%202/back/';
+    let urlPadrao = 'http://localhost/Projeto_Interdisciplinar/back/';
     urlPadrao += urlPadrao + url;
     return urlPadrao;
 }

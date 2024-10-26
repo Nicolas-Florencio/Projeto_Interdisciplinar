@@ -17,7 +17,7 @@ function pesquisarApi() {
 
         let busca = document.getElementById('busca').value; //pega dados de pesquisa
 
-        fetch('http://localhost/Projeto%20Interdisiplinar%202/back/buscar.php?busca=' + busca)
+        fetch('http://localhost/Projeto_Interdisciplinar/back/buscar.php?busca=' + busca)
             .then(
                 respostaApi => {
                     return respostaApi.json(); //transforma o retorno da api em JSON

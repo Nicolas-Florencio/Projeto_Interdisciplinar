@@ -13,7 +13,7 @@ function redirecionar() {
 
         if (contagem < 0) {
             clearInterval(contador); // Parar intervalo
-            window.location.href = "http://localhost/Projeto%20Interdisiplinar%202/front/pages/logar.php"; // redirecionamento
+            window.location.href = "http://localhost/Projeto_Interdisciplinar/front/pages/logar.php"; // redirecionamento
         }
     }, 1000);
 
@@ -33,7 +33,7 @@ function cadastrarApi() {
         
 
         try {
-            const respostaApi = await fetch('http://localhost/Projeto%20Interdisiplinar%202/back/cadastrar.php', {
+            const respostaApi = await fetch('http://localhost/Projeto_Interdisciplinar/back/cadastrar.php', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
