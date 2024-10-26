@@ -16,3 +16,22 @@ Essa versão serve como a base para as próximas implementações e atualizaçõ
 ---
 
 > **Observação**: A versão 0.0 é a base inicial e pode conter alterações significativas em versões subsequentes à medida que o projeto se desenvolve.
+
+# Projeto NUTRISAFE
+
+## Versão 1.0 - Primeira Atualização
+
+Esta é a versão 1.0 do projeto, apresentando melhorias de desenvolvimento do projeto. Nesta versão foram adicionados:
+
+- API para controle de informações entre back-end e front-end.
+- Padrões de desenvolvimento.
+- Conexão com banco de dados.
+- Dependências de projeto.
+
+### Notas sobre a versão 1.0
+
+Essa versão serve como um update da versão inicial do projeto. A partir deste ponto, o projeto evoluirá com novas funcionalidades utilizando de recursos aprendidos e utilizados em sala de aula.
+
+---
+
+> **Observação**: A versão 1.0 é a versão sem o front-end completo.
