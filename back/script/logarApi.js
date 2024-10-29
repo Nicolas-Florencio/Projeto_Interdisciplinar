@@ -1,7 +1,5 @@
-//import { criarUrl } from "../../back/script/criarUrl.js";
-
 function logarApi() {
-    let url = "carlos"
+    let url = "logar"
 
     console.log(criarUrl(url));
 }

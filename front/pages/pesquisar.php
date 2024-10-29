@@ -18,6 +18,7 @@
     
     <div id="resultado"></div>
 
+    <script src="../../back/script/criarUrl.js"></script>
     <script src="../../back/script/pesquisarApi.js"></script>
 </body>
 </html>

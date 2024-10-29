@@ -11,7 +11,7 @@ function verificaUsuario($dados) {
     include "conexao.php";
 
     try {
-        $stmt = 'SELECT email FROM cliente WHERE email LIKE :email';
+        $stmt = 'SELECT email FROM login WHERE email LIKE :email';
 
         $comando = $pdo->prepare($stmt);
 
@@ -22,15 +22,7 @@ function verificaUsuario($dados) {
 
         $qtdResult = $comando->rowCount();
 
-        // if($qtdResult == 0) {
-        //     return $dados;
-        // }
-
-        // else {
-        //     // throw new PDOException("Usuário existente", 23000);
-        //     return false;
-        // }
-        return $qtdResult == 0 ? true : false;
+        return $qtdResult == 0 ? $comando->fetchAll(PDO::FETCH_ASSOC) : false;
         
     } catch (PDOException $e) {
         return $e;
@@ -41,30 +33,34 @@ function cadastroUsuario($dados) {
     try {
         include "conexao.php";
 
-        if(verificaUsuario($dados) == false) {
+        $verificaIdCliente = verificaUsuario($dados);
+
+        if ($verificaIdCliente == false && empty($verificaIdCliente)) {
             throw new PDOException("Usuário existente", 23000);
         }
 
-        $query = "INSERT INTO cliente(nome, email, senha, dataNasc)";
-        $query .= "VALUES (:nome, :email, :senha, :dataNasc)";
-        
-        
+        $query = "INSERT INTO cliente(nome, dataNasc) VALUES (:nome, :dataNasc);";
         $nome = htmlspecialchars($dados['nome']);
-        $email = htmlspecialchars($dados['email']);
-        $senha = htmlspecialchars($dados['senha']);
         $dataNasc = htmlspecialchars($dados['dataNasc']);
         
         $comando = $pdo->prepare($query);
-        
         $comando->bindParam(":nome", $nome);
-        $comando->bindParam(":email", $email);
-        $comando->bindParam(":senha", $senha);
         $comando->bindParam(":dataNasc", $dataNasc);
 
         $retorno = $comando->execute();
-
+        
         if ($retorno) {
-            return true;
+
+            $query = "INSERT INTO login(email, senha, cliente_idCliente) VALUES (:email, :senha, :id);";
+            $email = htmlspecialchars($dados['email']);
+            $senha = htmlspecialchars($dados['senha']);
+            
+            $comando = $pdo->prepare($query);
+            $comando->bindParam(":email", $email);
+            $comando->bindParam(":senha", $senha);
+            $comando->bindParam(":id", $verificaIdCliente['idCliente']);
+
+            $retorno = $comando->execute();
         }
         else {
             return "Erro ao cadastrar!";
@@ -82,7 +78,7 @@ function cadastroUsuario($dados) {
             return json_encode($mensagem);
 
         } else {
-            return $Exception->getMessage();
+            return $Exception;
         }
     }
 }

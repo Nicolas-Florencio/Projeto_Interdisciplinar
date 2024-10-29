@@ -16,8 +16,11 @@ function pesquisarApi() {
         e.preventDefault(); //cancela envio do formulário
 
         let busca = document.getElementById('busca').value; //pega dados de pesquisa
+        let url = "buscar";
+        url = criarUrl(url);
 
-        fetch('http://localhost/Projeto_Interdisciplinar/back/buscar.php?busca=' + busca)
+
+        fetch(url + '?busca=' + busca)
             .then(
                 respostaApi => {
                     return respostaApi.json(); //transforma o retorno da api em JSON

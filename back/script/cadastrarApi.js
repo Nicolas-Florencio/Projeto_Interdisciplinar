@@ -16,10 +16,6 @@ function redirecionar() {
             window.location.href = "http://localhost/Projeto_Interdisciplinar/front/pages/logar.php"; // redirecionamento
         }
     }, 1000);
-
-    // setTimeout(() => {
-    //     window.location.href = "http://localhost/Projeto%20Interdisiplinar%202/front/logar.php";
-    // }, 1000);
 }
 
 function cadastrarApi() {
@@ -31,9 +27,12 @@ function cadastrarApi() {
         let senha = document.getElementById('senha').value; //pega dados de cadastro
         let dataNasc = document.getElementById('data').value; //pega dados de cadastro
         
+        let url = "cadastrar";
+        url = criarUrl(url);
+        
 
         try {
-            const respostaApi = await fetch('http://localhost/Projeto_Interdisciplinar/back/cadastrar.php', {
+            const respostaApi = await fetch(url, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
