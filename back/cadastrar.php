@@ -7,28 +7,7 @@ $arrayDados = json_decode($recebeJSON, true); //array de objetos
 
 // var_dump($arrayDados, $recebeJSON);
 
-function verificaUsuario($dados) {
-    include "conexao.php";
-
-    try {
-        $stmt = 'SELECT email FROM login WHERE email LIKE :email';
-        
-        $comando = $pdo->prepare($stmt);
-
-        $email = $dados['email'];
-
-        $comando->bindParam(":email", $email);
-        $comando->execute();
-        $idCliente = $comando->fetchAll(PDO::FETCH_ASSOC);
-
-        $qtdResult = $comando->rowCount();
-
-        return $qtdResult == 0 ? true : false;
-        
-    } catch (PDOException $e) {
-        return $e;
-    }
-}
+include "funcoes.php";
 
 function cadastroUsuario($dados) {
     try {
@@ -50,8 +29,8 @@ function cadastroUsuario($dados) {
 
         if ($retorno) {
 
-            $getIdCliente = verificaUsuario($dados);
-            echo "id do user: ".$getIdCliente;
+            $idCliente = pegaIdUsuario($dados);
+            // echo $idCliente['idCliente'];
 
             $query = "INSERT INTO login(email, senha, cliente_idCliente) VALUES (:email, :senha, :id);";
             $email = htmlspecialchars($dados['email']);
@@ -60,9 +39,11 @@ function cadastroUsuario($dados) {
             $comando = $pdo->prepare($query);
             $comando->bindParam(":email", $email);
             $comando->bindParam(":senha", $senha);
-            $comando->bindParam(":id", $getIdCliente['idCliente']);
+            $comando->bindParam(":id", $idCliente['idCliente']);
 
             $retorno = $comando->execute();
+
+            return $retorno ? "Usuário cadastrado!" : "Erro ao cadastrar email!";
         }
         else {
             return "Erro ao cadastrar!";
