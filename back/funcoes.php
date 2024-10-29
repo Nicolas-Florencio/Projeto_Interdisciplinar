@@ -1,5 +1,5 @@
 <?php
-    function verificaUsuario($dados) {
+    function verificarUsuario($dados) { //verifica se usuario existe na base de dados
         include "conexao.php";
     
         try {
@@ -21,7 +21,7 @@
         }
     }
     
-    function pegaIdUsuario($dados) {
+    function pegarIdUsuario($dados) { //obtem o id do usuario para realizar insercao na tabela de login
         include "conexao.php";
     
         try {
@@ -43,6 +43,27 @@
         }
     }
 
+    function criarSessao() {
+        session_start();
+        if(!isset($_SESSION['controleSessao'])) {
+            $_SESSION['controleSessao'] = 'logado';
+            return true; //true para sessao inciada
+        }
+        else {
+            return false; //falso se usuario ja logado
+        }
+    }
 
+    function destruirSessao() {
+        session_start();
+        if(!isset($_SESSION['controleSessao'])) {
+            return 'logon'; //logon para usuario realizar login (nao logado)
+        }
+        else {
+            $_SESSION['controleSessao'] = '';
+            session_destroy();
+            return 'logoff'; //logoff para usuario deslogado
+        }
+    }
 
 ?>

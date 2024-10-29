@@ -1,3 +1,18 @@
+<?php
+    //controle de sessao
+    session_start();
+    $_SESSION['controleSessao'] = 'a';
+    if($_SESSION['controleSessao'] == 'logado') {
+        header('Location: http://localhost/Projeto_Interdisciplinar/front/pages/pesquisar.php');
+    }
+    else {
+        echo 'nao logado';
+    }
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

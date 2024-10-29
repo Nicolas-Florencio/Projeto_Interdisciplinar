@@ -13,7 +13,7 @@ function cadastroUsuario($dados) {
     try {
         include "conexao.php";
         
-        if (verificaUsuario($dados) == false) {
+        if (verificarUsuario($dados) == false) {
             throw new PDOException("Usuário existente", 23000);
         }
 
@@ -29,7 +29,7 @@ function cadastroUsuario($dados) {
 
         if ($retorno) {
 
-            $idCliente = pegaIdUsuario($dados);
+            $idCliente = pegarIdUsuario($dados);
             // echo $idCliente['idCliente'];
 
             $query = "INSERT INTO login(email, senha, cliente_idCliente) VALUES (:email, :senha, :id);";
