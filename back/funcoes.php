@@ -45,6 +45,7 @@
 
     function criarSessao() {
         session_start();
+        
         if(!isset($_SESSION['controleSessao'])) {
             $_SESSION['controleSessao'] = 'logado';
             return true; //true para sessao inciada

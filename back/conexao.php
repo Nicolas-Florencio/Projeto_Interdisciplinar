@@ -1,4 +1,6 @@
 <?php
+    if(session_status())
+
     $tipo = "mysql"; //identificador do sgbd
 
     $url = "localhost"; //url do servidor

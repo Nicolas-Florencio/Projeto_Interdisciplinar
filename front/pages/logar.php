@@ -1,17 +1,10 @@
 <?php
-    //controle de sessao
-    session_start();
-    $_SESSION['controleSessao'] = 'a';
-    if($_SESSION['controleSessao'] == 'logado') {
-        header('Location: http://localhost/Projeto_Interdisciplinar/front/pages/pesquisar.php');
-    }
-    else {
-        echo 'nao logado';
-    }
 
+    if(session_id() != '') {
+        header('Location: http://localhost/Projeto_Interdisciplinar/front/pages/index.php');
+    }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,15 +16,16 @@
     <body onload="logarApi();">
         <h1>Bem-vindo ao LOGIN</h1>
 
-        <form action="POST">
+        <form id="form" action="POST">
             <label for="username">Login:</label>
-            <input type="text" name="username" placeholder="Informe seu e-mail" required>
+            <input type="text" id="user" name="username" placeholder="Informe seu e-mail" required>
 
             <label for="pass">Senha:</label>
-            <input type="password" name="pass" placeholder="Informe sua senha" required>
-        </form>
+            <input type="password" id="pass" name="pass" placeholder="Informe sua senha" required>
 
-        <button>Entrar</button>
+            <button>Entrar</button>
+        </form>
+        
 
         <div id="resultado"></div>
 

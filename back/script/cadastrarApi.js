@@ -46,7 +46,7 @@ function cadastrarApi() {
             });
 
             if (respostaApi.ok) {
-                console.log(respostaApi)
+                console.log(respostaApi);
                 redirecionar();
             }
             else if (respostaApi.status == 409) {

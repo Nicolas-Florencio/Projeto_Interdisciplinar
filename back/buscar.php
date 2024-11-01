@@ -1,5 +1,21 @@
 <?php
 
+try {
+    if ($_SERVER['REQUEST_METHOD'] === "GET") {
+        // Captura o corpo da requisição que contém o JSON
+        $recebeJSON = file_get_contents('php://input');
+
+        // Decodifica o JSON em um array associativo
+        $arrayDados = json_decode($recebeJSON, true); //array de objetos
+    }
+    else {
+        throw new Exception("Metodo invalido!");
+    }
+}
+catch(Exception $e) {
+    echo json_encode(['Erro' => $e->getMessage()]);
+}
+
 function buscarProduto()
 {
     include 'conexao.php';

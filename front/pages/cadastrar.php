@@ -1,3 +1,11 @@
+<?php
+    //controle de sessao
+    
+    if(session_id() != '') {
+        header('Location: http://localhost/Projeto_Interdisciplinar/front/pages/index.php');
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">

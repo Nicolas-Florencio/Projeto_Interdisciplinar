@@ -1,46 +1,40 @@
 
-function pesquisarApi() {
-    document.getElementById("form").addEventListener('submit', (e) => {
+function logarApi() {
+    document.getElementById("form").addEventListener('submit', async (e) => {
         e.preventDefault(); //cancela envio do formulário
 
-        let busca = document.getElementById('busca').value; //pega dados de pesquisa
-        let url = "buscar";
+        let loginValue = document.getElementById('user').value; //pega dados de pesquisa
+        let senhaValue = document.getElementById('pass').value; //pega dados de pesquisa
+        let url = "logar";
         url = criarUrl(url);
 
+        // console.log(loginValue, senhaValue, url)
+        try  {
+            const respostaApi = await fetch(url, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: loginValue,
+                    senha: senhaValue
+                })
+            });
+            
+            if(respostaApi.ok) {
+                let retorno = await respostaApi.json();
+                console.log(retorno);
 
-        fetch(url + '?busca=' + busca)
-            .then(
-                respostaApi => {
-                    return respostaApi.json(); //transforma o retorno da api em JSON
+                if(retorno.success && retorno.redirect) {
+                    window.location.href = retorno.redirect;
                 }
-            )
-            .then(
-                retorno => {
-                    let resultadoDiv = document.getElementById('resultado'); //pega a div que receberá os resultados
-                    // console.log(resultadoDiv);
-                    resultadoDiv.innerHTML = '';
-                    var p = document.createElement('p'); //criação de elemento de resultado
-
-                    if (retorno.error) {
-                        alert("Erro na consulta"); //caso haja erros vindo da API
-                    }
-                    else if (retorno.length > 0) {
-
-                        retorno.forEach(dados => {
-                            var p = document.createElement('p');
-                            const produto = criarProduto(dados); // criação de objeto
-
-                            //colocando os dados dentro do elemento
-                            p.innerHTML = `${produto.idProduto} | ${produto.nome} | ${produto.descricao} | Peso: ${produto.peso} | Marca: ${produto.marca}`
-
-                            resultadoDiv.appendChild(p); //colocando o elemento dentro da div
-                        });
-                    }
-                    else {
-                        p.innerHTML = "Resultado não encontrado!";
-                        resultadoDiv.appendChild(p);
-                    }
+                else if(respostaApi.code == 403) {
+                    console.log("Usuario ou senha invalidos");
                 }
-            )
+            }
+        }
+        catch(e) {
+            console.log("Erro na requisição HTTP!", e);
+        }
     })
 }
