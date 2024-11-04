@@ -9,6 +9,11 @@
 
     $user = "php"; //nome do user
     $pass = 'senha123'; //senha user
+    
+    /* Minha conexao (Igor)
+    $user = "root";
+    $pass = '1234'; 
+    */
 
     //a dsn é uma string que informa a biblioteca os dados da conexao
     $dsn = "$tipo:host=$url;dbname=$banco;port=$porta";
