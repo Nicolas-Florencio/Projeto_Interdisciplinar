@@ -1,0 +1,191 @@
+body
+{
+    margin: 0;
+    background-color: #001806;
+    background-image: url('../images/alimentos2.jpg');
+    font-family: "Roboto", sans-serif;
+}
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+#barraNav
+{
+   background: radial-gradient(circle at top left, #144e21,#012409);
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#barraNav div:last-child:last-child /*--Estou posicionando o ultimo elemento da barra de pesquisa(botao) um pouco a esquerda*/
+{
+    transform: translateX(-2em);
+}
+
+#barraPesq
+{
+    background-color: #0e080883;
+    width: 60em;
+    height: 3.5em;
+    border-radius: 20px;
+    border: solid 1px #82BF72;
+    padding-left: 4em;
+    color: white;
+    background-image: url('../images/lupa.png');
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: 6px center;
+    
+}
+
+#barraPesq:hover
+{
+    border: solid 1px #cecece;
+}
+
+#barraPesq::placeholder
+{
+    color: #c0bebe;
+    padding-left: 1em;
+    padding-top: 1.3em;
+    font-size: 1.3em;
+}
+
+#barraPesq::placeholder:hover
+{
+    color: #694848;
+}
+
+
+#logo
+{   
+    width: 85px;
+}
+
+#toggleBarra
+{
+    background-image: url('../images/hamburguer.png');
+    background-size: cover;
+    width: 3em;
+    height: 3em;
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer;
+}
+
+#toggleBarra:hover
+{
+    opacity: 75%;
+}
+
+#toggleBarra:active
+{
+    opacity: 30%;
+}
+
+#barraLateral
+{
+    position: fixed;
+    top: 5.5em;
+    bottom: 5.5em;
+    width: 270px;
+    height: auto;
+    background-color: #000000b2;
+    color: white;
+    transition: right 0.3s;
+    right: -270px; 
+}
+
+#barraLateral.active
+{
+    right: 0;
+}
+
+.barraLateral-open 
+{
+    padding-right: 270px; 
+}
+
+#barraLateral a
+{
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+}
+
+#barraLateral ul
+{
+    list-style: none;
+}
+
+#barraLateral ul li {
+    margin-bottom: 20px; 
+    margin-top: 2em;
+}
+
+#box
+{
+    background-color: #0000008c;
+    border: solid 1px white;
+    border-radius: 25px;
+    width: 66%;
+    height: 41em;
+    margin: 3.2em auto;
+}
+
+#escanear
+{
+    color: #DADADA;
+    text-align: center;
+    font-size: 3.5em;
+    padding-top: 0.2em;
+}
+
+#codBar
+{
+    width: 18em;
+}
+
+#qrCode
+{
+    width: 17em;
+}
+
+#opcoes
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7em;
+}
+
+#barra
+{
+    width: 0.3em;;
+    height: 20em;
+}
+
+footer
+{
+   background: radial-gradient(circle at top left, #144e21,#011807);
+   width: 100%;
+   height: 5.5em;
+   color: #CBCBCB;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+}
+
+#direitos
+{
+    font-weight: bolder;
+    font-size: 1.2em;
+}
