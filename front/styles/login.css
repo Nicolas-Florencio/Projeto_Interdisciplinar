@@ -1,0 +1,103 @@
+*
+{
+    margin: 0;
+}
+
+body
+{
+    background: linear-gradient(90deg, #044d13,#010f04);
+    font-family: "Roboto", sans-serif;
+}
+
+
+.roboto-thin 
+{
+    font-family: "Roboto", sans-serif;
+    font-weight: 50;
+    font-style: normal;
+}
+
+#imgLog
+{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo
+{
+    width: 17em;
+}
+
+#login
+{
+    color: white;
+    font-size: 2em;
+    margin-bottom: 1.7em;
+}
+
+#form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.inputs
+{
+    width: 400px;
+    height: 4.3vh;
+    border-radius: 12px;
+    border: none;
+    background-color: #e2e2e2;
+    padding-left: 1.2em;
+    font-size: 1.5em;
+}
+
+.inputs::placeholder
+{
+    color: #3d3d3d;
+}
+
+#botao
+{
+    width: 10rem;
+    font-size: 1.3em;
+    height: 6vh;
+    background-color: #007507;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+#divConta
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    margin-top: 2em;
+}
+
+#conta
+{
+    color: white;
+    font-size: 1.4em;
+}
+
+#cadastro
+{
+    color: #F9EF9A;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+
+
