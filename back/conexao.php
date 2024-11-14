@@ -6,13 +6,10 @@
     $url = "localhost"; //url do servidor
     $porta = 3306; //porta do servidor
     $banco = "alergenicos"; //banco a ser usado
-
+    
+    /*
     $user = "php"; //nome do user
     $pass = 'senha123'; //senha user
-    
-    /* Minha conexao (Igor)
-    $user = "root";
-    $pass = '1234'; 
     */
 
     //a dsn é uma string que informa a biblioteca os dados da conexao
