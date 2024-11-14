@@ -1,0 +1,79 @@
+*
+{
+    margin: 0;
+}
+
+body
+{
+    background: linear-gradient(90deg, #044d13,#010f04);
+    font-family: "Roboto", sans-serif;
+}
+
+.roboto-thin 
+{
+    font-family: "Roboto", sans-serif;
+    font-weight: 50;
+    font-style: normal;
+}
+
+#logo
+{
+    width: 160px;
+}
+
+h1
+{
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#form
+{
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputs
+{
+    width: 500px;
+    height: 4.3vh;
+    border-radius: 12px;
+    border: none;
+    background-color: #c5c2c2;
+    padding-left: 1.2em;
+    font-size: 1.5em;
+}
+
+.inputs::placeholder
+{
+    color: #000000;
+}
+
+#dataNasc
+{
+    color: #e2e2e2;
+    font-size: 1.4em;
+}
+
+#botao
+{
+    width: 8em;
+    font-size: 1.2em;
+    height: 55px;
+    background-color: #007507;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 1.5em;
+    cursor: pointer;
+}
+
+#redirect
+{
+    color: white;
+}
