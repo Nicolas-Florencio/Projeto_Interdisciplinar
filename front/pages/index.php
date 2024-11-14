@@ -20,7 +20,7 @@
                 <img src="../images/Logo.png" alt="Logo do Projeto" id="logo"> <!--Logo do Projeto-->
             </div>
             <div>
-                <form method="GET" id="form" action="pesquisar.php">
+                <form method="GET" id="form" action="resultado.php">
                     <input type="text" placeholder="Digite o Nome do Produto" id="barraPesq"> <!-- Barra de pesquisa -->
                 </form>
             </div>
@@ -60,5 +60,8 @@
             </footer>
 
             <script src="../JS/script.js"></script>
+            <script src="../../back/script/criarUrl.js"></script>
+            <script src="../../back/script/cadastrarApi.js"></script>
+            
 </body>
 </html>
