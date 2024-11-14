@@ -8,7 +8,7 @@ body
 
 .roboto-thin {
     font-family: "Roboto", sans-serif;
-    font-weight: 100;
+    font-weight: 50;
     font-style: normal;
   }
 
@@ -59,7 +59,6 @@ body
 {
     color: #694848;
 }
-
 
 #logo
 {   
@@ -188,4 +187,85 @@ footer
 {
     font-weight: bolder;
     font-size: 1.2em;
+}
+
+@media (max-width: 1366px) and (max-height: 768px)
+{
+
+    /*Barra de Navegação*/
+
+    #barraPesq
+    {
+        width: 35em;
+        height: 2.8em;
+        border-radius: 20px;
+        border: solid 1px #82BF72;
+        padding-left: 2em;
+        background-size: 30px 30px;
+        background-position: 3px center;
+        
+    }
+
+    #barraPesq::placeholder
+    {
+        color: #c0bebe;
+        padding-left: 1em;
+        padding-top: 1.3em;
+        font-size: 1em;
+    }
+
+    #toggleBarra
+    {
+        
+        background-size: cover;
+        width: 3em;
+        height: 3em;
+    }
+
+    #logo
+    {   
+        width: 70px;
+    }
+
+        #toggleBarra
+    {
+        width: 2em;
+        height: 2em;
+    }
+   
+        /*Main*/
+
+        #box
+        {
+            border-radius: 25px;
+            width: 56%;
+            height: 41em;
+            margin: 2em auto;
+        }
+
+        #escanear
+        {
+            font-size: 2.2em;
+        }
+
+        #codBar
+        {
+            width: 14em;
+        }
+
+        #qrCode
+        {
+            width: 13em;
+        }
+
+        #opcoes
+        {
+            margin-top: 3em;
+        }
+
+        #barra
+        {
+            width: 0.3em;;
+            height: 15em;
+        }
 }
