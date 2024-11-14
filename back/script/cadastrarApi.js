@@ -3,14 +3,17 @@ function redirecionar() {
     // Redireciona para outra página após 3 segundos
     let div = document.getElementById("resultado");
     let p = document.createElement("p");
+    p.style.color="white";
+    p.style.fontSize="1.4em";
+    p.style.textAlign="center";
+    p.textContent="Redirecionando para Login...";
     div.appendChild(p);
-
+    
     let contagem = 3;
-
     let contador = setInterval(() => {
         p.innerHTML = contagem;
         contagem--;
-
+        
         if (contagem < 0) {
             clearInterval(contador); // Parar intervalo
             window.location.href = "http://localhost/Projeto_Interdisciplinar/front/pages/logar.php"; // redirecionamento
