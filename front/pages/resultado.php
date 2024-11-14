@@ -22,7 +22,7 @@
             </div>
             <div>
                 <form method="GET" id="form" action="resultado.php">
-                    <input type="text" placeholder="Digite o Nome do Produto" id="barraPesq"> <!-- Barra de pesquisa -->
+                    <input type="text" name="buscar" placeholder="Digite o Nome do Produto" id="barraPesq"> <!-- Barra de pesquisa -->
                 </form>
             </div>
             <div>
@@ -51,5 +51,7 @@
         <script src="../JS/script.js"></script>
     <script src="../../back/script/criarUrl.js"></script>
     <script src="../../back/script/pesquisarApi.js"></script>
+
+    <!-- <script src="../../back/script/pesquisarApi.js"></script> -->
 </body>
 </html>

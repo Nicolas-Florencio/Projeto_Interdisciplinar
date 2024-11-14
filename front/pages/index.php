@@ -21,7 +21,7 @@
             </div>
             <div>
                 <form method="GET" id="form" action="resultado.php">
-                    <input type="text" placeholder="Digite o Nome do Produto" id="barraPesq"> <!-- Barra de pesquisa -->
+                    <input name="buscar" type="text" placeholder="Digite o Nome do Produto" id="barraPesq"> <!-- Barra de pesquisa -->
                 </form>
             </div>
             <div>

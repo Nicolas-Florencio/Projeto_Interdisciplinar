@@ -42,6 +42,10 @@ function buscarProduto()
         $comando->execute();
         
         $result = $comando->fetchAll(PDO::FETCH_ASSOC);
+
+        if(empty($result)) {
+            $result = "Nenhum produto encontrado";
+        }
         
         
         header('Content-Type: application/json');

@@ -11,16 +11,15 @@ function criarProduto(dadosApi) {
     return produto;
 }
 
-function pesquisarApi() {
-    document.getElementById("form").addEventListener('submit', (e) => {
-        e.preventDefault(); //cancela envio do formulário
-
-        let busca = document.getElementById('busca').value; //pega dados de pesquisa
+async function pesquisarApi() {
+        
+        let params = new URLSearchParams(document.location.search); //Objeto da url
+        let busca = params.get("buscar"); //parametro da url        
+        
         let url = "buscar";
         url = criarUrl(url);
 
-
-        fetch(url + '?busca=' + busca)
+        await fetch(url + '?busca=' + busca)
             .then(
                 respostaApi => {
                     return respostaApi.json(); //transforma o retorno da api em JSON
@@ -54,5 +53,5 @@ function pesquisarApi() {
                     }
                 }
             )
-    })
+    
 }
