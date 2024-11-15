@@ -12,46 +12,46 @@ function criarProduto(dadosApi) {
 }
 
 async function pesquisarApi() {
-        
-        let params = new URLSearchParams(document.location.search); //Objeto da url
-        let busca = params.get("buscar"); //parametro da url        
-        
-        let url = "buscar";
-        url = criarUrl(url);
 
-        await fetch(url + '?busca=' + busca)
-            .then(
-                respostaApi => {
-                    return respostaApi.json(); //transforma o retorno da api em JSON
+    let params = new URLSearchParams(document.location.search); //Objeto da url
+    let busca = params.get("buscar"); //parametro da url        
+
+    let url = "buscar";
+    url = criarUrl(url);
+
+    await fetch(url + '?busca=' + busca)
+        .then(
+            respostaApi => {
+                return respostaApi.json(); //transforma o retorno da api em JSON
+            }
+        )
+        .then(
+            retorno => {
+                let resultadoDiv = document.getElementById('resultado'); //pega a div que receberá os resultados
+                // console.log(resultadoDiv);
+                resultadoDiv.innerHTML = '';
+                var p = document.createElement('p'); //criação de elemento de resultado
+
+                if (retorno.error) {
+                    alert("Erro na consulta"); //caso haja erros vindo da API
                 }
-            )
-            .then(
-                retorno => {
-                    let resultadoDiv = document.getElementById('resultado'); //pega a div que receberá os resultados
-                    // console.log(resultadoDiv);
-                    resultadoDiv.innerHTML = '';
-                    var p = document.createElement('p'); //criação de elemento de resultado
+                else if (retorno.length > 0) {
 
-                    if (retorno.error) {
-                        alert("Erro na consulta"); //caso haja erros vindo da API
-                    }
-                    else if (retorno.length > 0) {
+                    retorno.forEach(dados => {
+                        var p = document.createElement('p');
+                        const produto = criarProduto(dados); // criação de objeto
 
-                        retorno.forEach(dados => {
-                            var p = document.createElement('p');
-                            const produto = criarProduto(dados); // criação de objeto
+                        //colocando os dados dentro do elemento
+                        p.innerHTML = `${produto.idProduto} | ${produto.nome} | ${produto.descricao} | Peso: ${produto.peso} | Marca: ${produto.marca}`
 
-                            //colocando os dados dentro do elemento
-                            p.innerHTML = `${produto.idProduto} | ${produto.nome} | ${produto.descricao} | Peso: ${produto.peso} | Marca: ${produto.marca}`
-
-                            resultadoDiv.appendChild(p); //colocando o elemento dentro da div
-                        });
-                    }
-                    else {
-                        p.innerHTML = "Resultado não encontrado!";
-                        resultadoDiv.appendChild(p);
-                    }
+                        resultadoDiv.appendChild(p); //colocando o elemento dentro da div
+                    });
                 }
-            )
-    
+                else {
+                    p.innerHTML = "Resultado não encontrado!";
+                    resultadoDiv.appendChild(p);
+                }
+            }
+        )
+
 }
