@@ -1,17 +1,65 @@
-// Função para criar um objeto produto a partir dos dados recebidos
-function criarProduto(dadosApi) {
-    const produto = {
-        idProduto: dadosApi.idProduto,
-        nome: dadosApi.nome,
-        peso: dadosApi.peso,
-        descricao: dadosApi.descricao,
-        marca: dadosApi.marca,
-        ingredientes: dadosApi.ingredientes
-    };
-    return produto;
-}
+    // Função para criar um objeto produto a partir dos dados recebidos
+    function criarProduto(dadosApi) {
+        const produto = {
+            idProduto: dadosApi.idProduto,
+            nome: dadosApi.nome,
+            peso: dadosApi.peso,
+            descricao: dadosApi.descricao,
+            marca: dadosApi.marca,
+            ingredientes: dadosApi.ingredientes
+        };
+        return produto;
+    }
 
-async function pesquisarApi() {
+    async function pesquisarApi(url, busca) {
+        try {
+            //console.log("entrou: " + url + busca);
+            const respostaApi = await fetch(url + '?busca=' + busca);
+            const retorno = await respostaApi.json();
+
+            const resultadoDiv = document.getElementById('resultado'); //Pega div para inserir resultado
+            resultadoDiv.innerHTML = ''; //Limpa os resultados anteriores
+
+            if (retorno.error) {
+                alert("Erro na consulta"); //caso haja erros vindo da API
+            }
+
+            else if (retorno.length > 0) {
+
+                retorno.forEach(dados => {
+                    var card = document.createElement('div');
+                    var img = document.createElement('img');
+                    var p1 = document.createElement('p');
+                    var p2 = document.createElement('p');
+                    var p3 = document.createElement('p');
+
+                    const produto = criarProduto(dados); // criação de objeto
+
+                    card.setAttribute('class', 'card');
+                    img.setAttribute('src', `../../back/images/${produto.idProduto}.png`);
+                    img.setAttribute('alt', `${produto.nome}`);
+
+                    //colocando os dados dentro do elemento
+                    p1.innerHTML = `Nome: ${produto.nome}`;
+                    p2.innerHTML = `Descricao: ${produto.descricao}`;
+                    p3.innerHTML = `Peso: ${produto.peso}g`;
+
+                    card.appendChild(img); //coloca a imagem dentro da div
+                    card.appendChild(p1); //coloca o p dentro da div
+                    card.appendChild(p2); //coloca o p dentro da div
+                    card.appendChild(p3); //coloca o p dentro da div
+                    resultadoDiv.appendChild(card); //colocando a dicv dentro do resultado
+                });
+            }
+            else {
+                p.innerHTML = "Resultado não encontrado!";
+                resultadoDiv.appendChild(p);
+            }
+        }
+        catch(erro) {
+            alert(erro);
+        }
+    }
 
     let params = new URLSearchParams(document.location.search); //Objeto da url
     let busca = params.get("buscar"); //parametro da url        
@@ -19,39 +67,9 @@ async function pesquisarApi() {
     let url = "buscar";
     url = criarUrl(url);
 
-    await fetch(url + '?busca=' + busca)
-        .then(
-            respostaApi => {
-                return respostaApi.json(); //transforma o retorno da api em JSON
-            }
-        )
-        .then(
-            retorno => {
-                let resultadoDiv = document.getElementById('resultado'); //pega a div que receberá os resultados
-                // console.log(resultadoDiv);
-                resultadoDiv.innerHTML = '';
-                var p = document.createElement('p'); //criação de elemento de resultado
-
-                if (retorno.error) {
-                    alert("Erro na consulta"); //caso haja erros vindo da API
-                }
-                else if (retorno.length > 0) {
-
-                    retorno.forEach(dados => {
-                        var p = document.createElement('p');
-                        const produto = criarProduto(dados); // criação de objeto
-
-                        //colocando os dados dentro do elemento
-                        p.innerHTML = `${produto.idProduto} | ${produto.nome} | ${produto.descricao} | Peso: ${produto.peso} | Marca: ${produto.marca}`
-
-                        resultadoDiv.appendChild(p); //colocando o elemento dentro da div
-                    });
-                }
-                else {
-                    p.innerHTML = "Resultado não encontrado!";
-                    resultadoDiv.appendChild(p);
-                }
-            }
-        )
-
-}
+    document.getElementById("form").addEventListener('submit', async (e) => {
+        e.preventDefault(); //cancela envio do formulário
+        let busca = document.getElementById('barraPesq').value; //pega busca
+        await pesquisarApi(url, busca);
+    });
+    pesquisarApi(url, busca);

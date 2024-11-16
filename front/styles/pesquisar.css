@@ -6,3 +6,12 @@ p {
     margin: 3rem;
     border: 1px solid black;
 }
+
+.card {
+    width: 25vw;
+    height: 30vh;
+    & img {
+        max-width:12vw;
+        max-height: 17vh;
+    }
+}

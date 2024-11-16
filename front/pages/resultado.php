@@ -14,11 +14,11 @@
     <title>Resultado</title>
 </head>
 
-<body onload="pesquisarApi();">
+<body >
 <header>
         <nav id="barraNav"> <!-- Barra de navegação-->
             <div>
-                <img src="../images/Logo.png" alt="Logo do Projeto" id="logo"> <!--Logo do Projeto-->
+                <a href="index.php"><img src="../images/Logo.png" alt="Logo do Projeto" id="logo"></a> <!--Logo do Projeto-->
             </div>
             <div>
                 <form method="GET" id="form" action="resultado.php">
