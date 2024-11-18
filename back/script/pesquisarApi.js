@@ -34,13 +34,18 @@
                     var p3 = document.createElement('p');
 
                     const produto = criarProduto(dados); // criação de objeto
-
+                    
+                    p1.setAttribute('class', 'prod');
+                    p1.setAttribute('id', 'prod1');
+                    p2.setAttribute('class', 'prod');
+                    p3.setAttribute('class', 'prod');
                     card.setAttribute('class', 'card');
                     img.setAttribute('src', `../../back/images/${produto.idProduto}.png`);
+                    img.setAttribute('id', `imgTam`);
                     img.setAttribute('alt', `${produto.nome}`);
 
                     //colocando os dados dentro do elemento
-                    p1.innerHTML = `Nome: ${produto.nome}`;
+                    p1.innerHTML = `${produto.nome}`;
                     p2.innerHTML = `Descricao: ${produto.descricao}`;
                     p3.innerHTML = `Peso: ${produto.peso}g`;
 
@@ -48,7 +53,7 @@
                     card.appendChild(p1); //coloca o p dentro da div
                     card.appendChild(p2); //coloca o p dentro da div
                     card.appendChild(p3); //coloca o p dentro da div
-                    resultadoDiv.appendChild(card); //colocando a dicv dentro do resultado
+                    resultadoDiv.appendChild(card); //colocando a div dentro do resultado
                 });
             }
             else {

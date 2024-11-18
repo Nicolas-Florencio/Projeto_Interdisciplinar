@@ -1,3 +1,10 @@
+.roboto-thin-italic {
+    font-family: "Roboto", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+
 *
 {
     margin: 0;
@@ -10,16 +17,9 @@ body
 }
 
 
-.roboto-thin 
-{
-    font-family: "Roboto", sans-serif;
-    font-weight: 50;
-    font-style: normal;
-}
-
 #imgLog
 {
-    margin-top: 3em;
+    margin-top: 5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,7 +60,7 @@ body
 
 .inputs::placeholder
 {
-    color: #3d3d3d;
+    color: #525151;
 }
 
 #botao
@@ -86,6 +86,11 @@ body
     margin-top: 2em;
 }
 
+#botao:hover
+{
+    background-color:  #015c07;
+}
+
 #conta
 {
     color: white;
@@ -99,5 +104,9 @@ body
     font-size: 1.4em;
 }
 
+#cadastro:hover
+{
+    color: #a7a068;
+}
 
 

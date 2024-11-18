@@ -1,7 +1,10 @@
 <?php
 
+    include "../../back/conexao.php";
 
-
+    $sql = "SELECT * FROM login";    
+    $comando = $pdo->query($sql);     
+    $resultado = $comando->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Usuario</title>
     <link rel="stylesheet" href="../styles/style.css" type="text/css">
     <!--Fonte escolhida-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,18 +45,9 @@
                 </ul>
             </div>
                 <div id="box">
-                    <p id="escanear">Escanear Produto</p>
-                        <div id="opcoes">
-                            <div>
-                                <img src="../images/CodDBarra.png" alt="codigo de barras" id="codBar">
-                            </div>
-                            <div>
-                                <img src="../images/Line 2.png" alt="" id="barra">
-                            </div>
-                            <div>
-                                <img src="../images/qrCode.png" alt="codigo de barras" id="qrCode">
-                            </div>
-                        </div>
+                    <p class="Infos"><strong>Nome :</strong></p>
+                    <p class="Infos"><strong>E-mail :</strong></p>
+                    <p class="Infos"><strong>Senha :</strong></p>
                 </div>
         </main>    
 

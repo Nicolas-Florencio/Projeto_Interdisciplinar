@@ -1,3 +1,10 @@
+.roboto-thin-italic 
+{
+    font-family: "Roboto", serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
 *
 {
     margin: 0;
@@ -9,11 +16,9 @@ body
     font-family: "Roboto", sans-serif;
 }
 
-.roboto-thin 
+#imgContainer
 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 50;
-    font-style: normal;
+    height: auto;
 }
 
 #logo
@@ -36,6 +41,7 @@ h1
     gap: 50px;
     justify-content: center;
     align-items: center;
+    height: 60vh;
 }
 
 .inputs
@@ -51,7 +57,7 @@ h1
 
 .inputs::placeholder
 {
-    color: #000000;
+    color: #525151;
 }
 
 #dataNasc
@@ -73,7 +79,303 @@ h1
     cursor: pointer;
 }
 
+#botao:hover
+{
+    background-color:  #015c07;
+}
+
 #redirect
 {
     color: white;
 }
+
+
+
+/* ---- Media Queryes ---- */
+
+@media (max-width: 1400px)
+{
+   
+
+    #logo
+    {
+        width: 110px;
+    }
+
+    h1
+    {
+        color: white;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #form
+    {
+        margin-top: 1.2em;
+        gap: 35px;
+        height: 70vh;
+    }
+
+    .inputs
+    {
+        width: 300px;
+        height: 1.4em;
+        border-radius: 9px;
+        border: none;
+        background-color: #c5c2c2;
+        padding-left: 0.5em;
+        font-size: 1.3em;
+    }
+
+    #dataNasc
+    {
+        color: #e2e2e2;
+        font-size: 1.2em;
+    }
+
+    #botao
+    {
+        width: 6em;
+        font-size: 1em;
+        height: 45px;
+        margin-top: 0em;
+    }
+
+}
+
+@media (max-width: 1200px)
+{
+    #logo
+    {
+        width: 110px;
+    }
+
+    h1
+    {
+        color: white;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #form
+    {
+        margin-top: 1.2em;
+        gap: 35px;
+        height: 70vh;
+    }
+
+    .inputs
+    {
+        width: 300px;
+        height: 1.4em;
+        border-radius: 9px;
+        border: none;
+        background-color: #c5c2c2;
+        padding-left: 0.5em;
+        font-size: 1.3em;
+    }
+
+    #dataNasc
+    {
+        color: #e2e2e2;
+        font-size: 1.2em;
+    }
+
+    #botao
+    {
+        width: 6em;
+        font-size: 1em;
+        height: 45px;
+        margin-top: 0em;
+    }
+}
+
+@media (max-width: 992px)
+{
+    #logo
+    {
+        width: 110px;
+    }
+
+    h1
+    {
+        color: white;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #form
+    {
+        margin-top: 1.2em;
+        gap: 35px;
+        height: 70vh;
+    }
+
+    .inputs
+    {
+        width: 300px;
+        height: 1.4em;
+        border-radius: 9px;
+        border: none;
+        background-color: #c5c2c2;
+        padding-left: 0.5em;
+        font-size: 1.3em;
+    }
+
+    #dataNasc
+    {
+        color: #e2e2e2;
+        font-size: 1.2em;
+    }
+
+    #botao
+    {
+        width: 6em;
+        font-size: 1em;
+        height: 45px;
+        margin-top: 0em;
+    }
+}
+
+@media (max-width: 768px)
+{
+    #logo
+    {
+        width: 110px;
+    }
+
+    h1
+    {
+        color: white;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #form
+    {
+        margin-top: 0.8em;
+        gap: 35px;
+        height: 70vh;
+    }
+
+    .inputs
+    {
+        width: 400px;
+        height: 1.6em;
+        border-radius: 9px;
+        border: none;
+        background-color: #c5c2c2;
+        padding-left: 0.5em;
+        font-size: 1.3em;
+    }
+
+    #dataNasc
+    {
+        color: #e2e2e2;
+        font-size: 1.2em;
+    }
+
+    #botao
+    {
+        width: 6em;
+        font-size: 1em;
+        height: 45px;
+        margin-top: 0em;
+    }
+}
+
+
+        @media (max-width: 576px)
+        {
+            #logo
+            {
+                width: 110px;
+            }
+
+            h1
+            {
+                color: white;
+                text-align: center;
+                font-size: 2.5em;
+            }
+
+            #form
+            {
+                margin-top: 2.5em;
+                gap: 35px;
+                height: auto;
+            }
+
+            .inputs
+            {
+                width: 350px;
+                height: 1.4em;
+                border-radius: 9px;
+                border: none;
+                background-color: #c5c2c2;
+                padding-left: 0.7em;
+                font-size: 1.3em;
+            }
+
+            #dataNasc
+            {
+                color: #e2e2e2;
+                font-size: 1.2em;
+            }
+
+            #botao
+            {
+                width: 7em;
+                font-size: 1em;
+                height: 45px;
+                margin-top: 1em;
+            }
+        }
+
+
+            @media (max-width: 375px)
+            {
+                #logo
+                {
+                    width: 110px;
+                }
+
+                h1
+                {
+                    color: white;
+                    text-align: center;
+                    font-size: 2em;
+                }
+
+                #form
+                {
+                    margin-top: 1.2em;
+                    gap: 35px;
+                    height: 70vh;
+                }
+
+                .inputs
+                {
+                    width: 300px;
+                    height: 1.4em;
+                    border-radius: 9px;
+                    border: none;
+                    background-color: #c5c2c2;
+                    padding-left: 0.5em;
+                    font-size: 1.3em;
+                }
+
+                #dataNasc
+                {
+                    color: #e2e2e2;
+                    font-size: 1.2em;
+                }
+
+                #botao
+                {
+                    width: 6em;
+                    font-size: 1em;
+                    height: 45px;
+                    margin-top: 0em;
+                }
+            }

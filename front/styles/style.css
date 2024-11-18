@@ -19,6 +19,7 @@ body
    display: flex;
    justify-content: space-between;
    align-items: center;
+   top: 0;
 }
 
 #barraNav div:last-child:last-child /*--Estou posicionando o ultimo elemento da barra de pesquisa(botao) um pouco a esquerda*/
@@ -126,14 +127,49 @@ body
     margin-top: 2em;
 }
 
+main
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
 #box
 {
+    display: flex;
+    flex-direction: column;
     background-color: #0000008c;
     border: solid 1px white;
     border-radius: 25px;
     width: 66%;
-    height: 41em;
-    margin: 3.2em auto;
+    height: auto;
+    /*height: 41em;*/
+    margin: 4em auto;
+    padding-bottom: 3.5em;
+}
+
+
+
+
+.card
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #929292;
+    border-radius: 20px;
+    padding: 3em;
+}
+
+#prod1
+{
+    font-size: 1.7em;
+}
+
+.prod
+{
+    color: white;
 }
 
 #escanear
@@ -141,7 +177,6 @@ body
     color: #DADADA;
     text-align: center;
     font-size: 3.5em;
-    padding-top: 0.2em;
 }
 
 #codBar
@@ -159,7 +194,7 @@ body
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 7em;
+    margin-top: 3em;
 }
 
 #barra
@@ -189,14 +224,372 @@ footer
     font-size: 1.2em;
 }
 
-@media (max-width: 1366px) and (max-height: 768px)
+
+.Infos
+{
+    color: white;
+}
+
+
+
+/* ---- MEDIA QUERYES ---- */
+
+
+@media (max-width: 1400px)
 {
 
     /*Barra de Navegação*/
 
+    
+
+
     #barraPesq
     {
-        width: 35em;
+        width: 48em;
+        height: 3em;
+        border-radius: 20px;
+        border: solid 1px #82BF72;
+        padding-left: 2em;
+        background-size: 30px 30px;
+        background-position: 3px center;
+        
+    }
+
+    #barraPesq::placeholder
+    {
+        color: #c0bebe;
+        padding-left: 1em;
+        padding-top: 1.3em;
+        font-size: 1em;
+    }
+
+    #toggleBarra
+    {
+        margin-left: 1em;
+        background-size: cover;
+        width: 3em;
+        height: 3em;
+    }
+
+    #logo
+    {   
+        width: 70px;
+    }
+
+        #toggleBarra
+    {
+        width: 2em;
+        height: 2em;
+    }
+   
+        /*Main*/
+
+
+        /* Side Bar */
+        #barraLateral
+        {
+            top: 4.5em;
+            bottom: 4em;
+        }
+
+      
+        #barraLateral a
+        {
+            font-size: 1.3em;
+            color: white;
+            text-decoration: none;
+        }
+
+        #box
+        {
+            border-radius: 25px;
+            width: 70%;
+            margin: 3em auto;
+        }
+
+        #escanear
+        {
+            font-size: 2.8em;
+        }
+
+        #codBar
+        {
+            width: 15em;
+        }
+
+        #qrCode
+        {
+            width: 14em;
+        }
+        
+        #opcoes
+        {
+            margin-top: 2em;
+        }
+
+        #barra
+        {
+            width: 0.25em;;
+            height: 17em;
+        }
+
+        footer
+        {
+            width: 100%;
+            height: 5em;
+        }
+
+        #direitos
+        {
+            font-weight: bolder;
+            font-size: 1em;
+        }
+}
+
+
+
+@media (max-width: 1200px)
+{
+
+    /*Barra de Navegação*/
+
+    #barraNav
+    {
+        height: 4em;
+    }
+
+
+    #barraPesq
+    {
+        width: 40em;
+        height: 2.5em;
+        border-radius: 20px;
+        border: solid 1px #82BF72;
+        padding-left: 2em;
+        background-size: 30px 30px;
+        background-position: 3px center;
+        
+    }
+
+    #barraPesq::placeholder
+    {
+        color: #c0bebe;
+        padding-left: 1em;
+        padding-top: 1.3em;
+        font-size: 1em;
+    }
+
+    #toggleBarra
+    {
+        margin-left: 1em;
+        background-size: cover;
+        width: 3em;
+        height: 3em;
+    }
+
+    #logo
+    {   
+        width: 70px;
+    }
+
+        #toggleBarra
+    {
+        width: 2em;
+        height: 2em;
+    }
+   
+        /*Main*/
+
+
+        /* Side Bar */
+        #barraLateral
+        {
+            top: 4em;
+            bottom: 4em;
+        }
+
+      
+        #barraLateral a
+        {
+            font-size: 1.3em;
+            color: white;
+            text-decoration: none;
+        }
+
+        #box
+        {
+            border-radius: 25px;
+            width: 72%;
+            margin: 2.5em auto;
+        }
+
+        #escanear
+        {
+            font-size: 2.4em;
+        }
+
+        #codBar
+        {
+            width: 13em;
+        }
+
+        #qrCode
+        {
+            width: 12em;
+        }
+        
+        #opcoes
+        {
+            margin-top: 1.4em;
+        }
+
+        #barra
+        {
+            width: 0.3em;;
+            height: 12.2em;
+        }
+
+        footer
+        {
+            width: 100%;
+            height: 4.2em;
+        }
+
+        #direitos
+        {
+            font-weight: bolder;
+            font-size: 1em;
+        }
+}
+
+
+
+
+@media (max-width: 992px)
+{
+
+    /*Barra de Navegação*/
+
+    #barraNav
+    {
+        height: 4em;
+    }
+
+
+    #barraPesq
+    {
+        width: 32em;
+        height: 2.5em;
+        border-radius: 20px;
+        border: solid 1px #82BF72;
+        padding-left: 2em;
+        background-size: 30px 30px;
+        background-position: 3px center;
+        
+    }
+
+    #barraPesq::placeholder
+    {
+        color: #c0bebe;
+        padding-left: 1em;
+        padding-top: 1.3em;
+        font-size: 1em;
+    }
+
+    #toggleBarra
+    {
+        margin-left: 1em;
+        background-size: cover;
+        width: 3em;
+        height: 3em;
+    }
+
+    #logo
+    {   
+        width: 70px;
+    }
+
+        #toggleBarra
+    {
+        width: 2em;
+        height: 2em;
+    }
+   
+        /*Main*/
+
+
+        /* Side Bar */
+        #barraLateral
+        {
+            top: 4em;
+            bottom: 4em;
+        }
+
+      
+        #barraLateral a
+        {
+            font-size: 1.3em;
+            color: white;
+            text-decoration: none;
+        }
+
+        #box
+        {
+            border-radius: 25px;
+            width: 80%;
+            margin: 3em auto;
+        }
+
+        #escanear
+        {
+            font-size: 2.2em;
+        }
+
+        #codBar
+        {
+            width: 11em;
+        }
+
+        #qrCode
+        {
+            width: 10em;
+        }
+        
+        #opcoes
+        {
+            margin-top: 1.5em;
+        }
+
+        #barra
+        {
+            width: 0.2em;;
+            height: 11.5em;
+        }
+
+        footer
+        {
+            width: 100%;
+            height: 4.2em;
+        }
+
+        #direitos
+        {
+            font-weight: bolder;
+            font-size: 1em;
+        }
+}
+
+
+
+@media (max-width: 768px)
+{
+
+    /*Barra de Navegação*/
+
+
+    #barraPesq
+    {
+        width: 25em;
         height: 2.8em;
         border-radius: 20px;
         border: solid 1px #82BF72;
@@ -216,7 +609,7 @@ footer
 
     #toggleBarra
     {
-        
+        margin-left: 1em;
         background-size: cover;
         width: 3em;
         height: 3em;
@@ -235,12 +628,26 @@ footer
    
         /*Main*/
 
+
+        /* Side Bar */
+        #barraLateral
+        {
+            top: 4.5em;
+            bottom: 4.5em;
+        }
+
+      
+        #barraLateral a
+        {
+            font-size: 1.3em;
+            color: white;
+            text-decoration: none;
+        }
+
         #box
         {
             border-radius: 25px;
-            width: 56%;
-            height: 41em;
-            margin: 2em auto;
+            width: 80%;
         }
 
         #escanear
@@ -250,22 +657,267 @@ footer
 
         #codBar
         {
-            width: 14em;
+            width: 10em;
         }
 
         #qrCode
         {
-            width: 13em;
+            width: 9em;
         }
-
+        
         #opcoes
         {
-            margin-top: 3em;
+            margin-top: 2em;
         }
 
         #barra
         {
-            width: 0.3em;;
-            height: 15em;
+            width: 0.2em;;
+            height: 13em;
+        }
+
+        footer
+        {
+            width: 100%;
+            height: 5.5em;
+        }
+
+        #direitos
+        {
+            font-weight: bolder;
+            font-size: 1.2em;
         }
 }
+
+
+
+
+@media (max-width: 576px)
+{
+
+    /*Barra de Navegação*/
+
+
+    #barraPesq
+    {
+        width: 15em;
+        height: 2.8em;
+        border-radius: 20px;
+        border: solid 1px #82BF72;
+        padding-left: 2em;
+        background-size: 30px 30px;
+        background-position: 3px center;
+        
+    }
+
+    #barraPesq::placeholder
+    {
+        color: #c0bebe;
+        padding-left: 1em;
+        padding-top: 1.3em;
+        font-size: 1em;
+    }
+
+    #toggleBarra
+    {
+        margin-left: 1em;
+        background-size: cover;
+        width: 3em;
+        height: 3em;
+    }
+
+    #logo
+    {   
+        width: 70px;
+    }
+
+        #toggleBarra
+    {
+        width: 2em;
+        height: 2em;
+    }
+   
+        /*Main*/
+
+
+        /* Side Bar */
+        #barraLateral
+        {
+            top: 4.5em;
+            bottom: 4.5em;
+        }
+
+      
+        #barraLateral a
+        {
+            font-size: 1.3em;
+            color: white;
+            text-decoration: none;
+        }
+
+        #box
+        {
+            border-radius: 25px;
+            width: 80%;
+        }
+
+        #escanear
+        {
+            font-size: 2.2em;
+        }
+
+        #codBar
+        {
+            width: 9em;
+        }
+
+        #qrCode
+        {
+            width: 8em;
+        }
+        
+        #opcoes
+        {
+            margin-top: 2em;
+        }
+
+        #barra
+        {
+            width: 0.2em;;
+            height: 13em;
+        }
+
+        footer
+        {
+            width: 100%;
+            height: 5.5em;
+        }
+
+        #direitos
+        {
+            font-weight: bolder;
+            font-size: 1.2em;
+        }
+}
+
+
+
+
+    @media (max-width: 375px)
+
+    {
+
+        /*Barra de Navegação*/
+
+        #barraNav
+        {
+            height: 5em;
+        }
+
+
+        #barraPesq
+        {
+            width: 13.5em;
+            height: 3em;
+            border-radius: 20px;
+            border: solid 1px #82BF72;
+            padding-left: 1.5em;
+            background-size: 30px 30px;
+            background-position: 3px center;
+            
+        }
+
+        #barraPesq::placeholder
+        {
+            color: #c0bebe;
+            padding-left: 1em;
+            padding-top: 1.3em;
+            font-size: 1em;
+        }
+
+       
+
+        #logo
+        {   
+            width: 65px;
+        }
+
+            #toggleBarra
+        {
+            width: 2em;
+            height: 2em;
+            margin-left: 2em;
+        }
+    
+            /*Main*/
+
+             /* Side Bar */
+            #barraLateral
+            {
+                top: 5em;
+                bottom: 4.5em;
+            }
+
+      
+            #barraLateral a
+            {
+                font-size: 1.3em;
+                color: white;
+                text-decoration: none;
+            }
+
+            #opcoes
+            {
+                margin-top: 2em;
+            }
+
+            #box
+            {
+                border-radius: 25px;
+                width: 85%;
+            }
+
+            #escanear
+            {
+                font-size: 2em;
+            }
+
+            #codBar
+            {
+                width: 8em;
+            }
+
+            #qrCode
+            {
+                width: 8em;
+            }
+
+            
+
+            #barra
+            {
+                width: 0.2em;;
+                height: 12.5em;
+            }
+
+            footer
+            {
+                width: 100%;
+                height: 4.5em;
+            }
+
+            #direitos
+            {
+                font-weight: bolder;
+                font-size: 1.2em;
+            }
+    }
+
+
+
+
+
+
+
+
+
