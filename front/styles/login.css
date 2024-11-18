@@ -109,4 +109,437 @@ body
     color: #a7a068;
 }
 
+@media (max-width: 1400px)
+{
+    #imgLog
+    {
+        margin-top: 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo
+    {
+        width: 14em;
+    }
+
+    #login
+    {
+        color: white;
+        font-size: 2.5em;
+        margin-bottom: 1.4em;
+    }
+
+    #form
+    {
+        gap: 40px;
+    }
+
+    .inputs
+    {
+        width: 450px;
+        height: 5vh;
+        border-radius: 16px;
+        border: none;
+        background-color: #e2e2e2;
+        padding-left: 1.2em;
+        font-size: 1.2em;
+    }
+
+
+
+    #botao
+    {
+        width: 8rem;
+        font-size: 1.4em;
+        height: 6vh;
+    }
+
+
+    #divConta
+    {
+        gap: 8px;
+        margin-top: 2em;
+    }
+
+
+
+    #conta
+    {
+        color: white;
+        font-size: 1.3em;
+    }
+
+    #cadastro
+    {
+        color: #F9EF9A;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 1200px)
+{
+
+    #imgLog
+    {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo
+    {
+        width: 10em;
+    }
+
+    #login
+    {
+        color: white;
+        font-size: 2em;
+        margin-bottom: 1.4em;
+    }
+
+    #form
+    {
+        gap: 50px;
+    }
+
+    .inputs
+    {
+        width: 400px;
+        height: 5vh;
+        border-radius: 13px;
+        border: none;
+        background-color: #e2e2e2;
+        padding-left: 1.2em;
+        font-size: 1em;
+    }
+
+
+
+    #botao
+    {
+        width: 7rem;
+        font-size: 1em;
+        height: 6vh;
+    }
+
+
+    #divConta
+    {
+        gap: 8px;
+        margin-top: 2em;
+    }
+
+
+
+    #conta
+    {
+        color: white;
+        font-size: 1em;
+    }
+
+    #cadastro
+    {
+        color: #F9EF9A;
+        text-decoration: none;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 992px)
+{
+    #imgLog
+    {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo
+    {
+        width: 14em;
+    }
+
+    #login
+    {
+        color: white;
+        font-size: 2.5em;
+        margin-bottom: 1.4em;
+    }
+
+    #form
+    {
+        gap: 50px;
+    }
+
+    .inputs
+    {
+        width: 550px;
+        height: 5vh;
+        border-radius: 16px;
+        border: none;
+        background-color: #e2e2e2;
+        padding-left: 1.2em;
+        font-size: 1.7em;
+    }
+
+
+
+    #botao
+    {
+        width: 9rem;
+        font-size: 1.6em;
+        height: 6vh;
+    }
+
+
+    #divConta
+    {
+        gap: 8px;
+        margin-top: 2em;
+    }
+
+
+
+    #conta
+    {
+        color: white;
+        font-size: 1.6em;
+    }
+
+    #cadastro
+    {
+        color: #F9EF9A;
+        text-decoration: none;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px)
+{
+    #imgLog
+    {
+        margin-top: 4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo
+    {
+        width: 16em;
+    }
+
+    #login
+    {
+        color: white;
+        font-size: 2.5em;
+        margin-bottom: 1.4em;
+    }
+
+    #form
+    {
+        gap: 40px;
+    }
+
+    .inputs
+    {
+        width: 450px;
+        height: 6vh;
+        border-radius: 16px;
+        border: none;
+        background-color: #e2e2e2;
+        padding-left: 1.2em;
+        font-size: 1.7em;
+    }
+
+
+
+    #botao
+    {
+        width: 8rem;
+        font-size: 1.6em;
+        height: 6vh;
+    }
+
+
+    #divConta
+    {
+        gap: 8px;
+        margin-top: 2em;
+    }
+
+
+
+    #conta
+    {
+        color: white;
+        font-size: 1.8em;
+    }
+
+    #cadastro
+    {
+        color: #F9EF9A;
+        text-decoration: none;
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 576px)
+{
+    #imgLog
+    {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo
+    {
+        width: 14em;
+    }
+
+    #login
+    {
+        color: white;
+        font-size: 2em;
+        margin-bottom: 1.4em;
+    }
+
+    #form
+    {
+        gap: 40px;
+    }
+
+    .inputs
+    {
+        width: 300px;
+        height: 6vh;
+        border-radius: 12px;
+        border: none;
+        background-color: #e2e2e2;
+        padding-left: 1.2em;
+        font-size: 1.5em;
+    }
+
+
+
+    #botao
+    {
+        width: 7rem;
+        font-size: 1.3em;
+        height: 6vh;
+    }
+
+
+    #divConta
+    {
+        gap: 5px;
+        margin-top: 2em;
+    }
+
+
+
+    #conta
+    {
+        color: white;
+        font-size: 1.4em;
+    }
+
+    #cadastro
+    {
+        color: #F9EF9A;
+        text-decoration: none;
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 375px)
+{
+    #imgLog
+    {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo
+    {
+        width: 14em;
+    }
+
+    #login
+    {
+        color: white;
+        font-size: 2em;
+        margin-bottom: 1.4em;
+    }
+
+    #form
+    {
+        gap: 40px;
+    }
+
+    .inputs
+    {
+        width: 300px;
+        height: 6vh;
+        border-radius: 12px;
+        border: none;
+        background-color: #e2e2e2;
+        padding-left: 1.2em;
+        font-size: 1.5em;
+    }
+
+
+
+    #botao
+    {
+        width: 7rem;
+        font-size: 1.3em;
+        height: 6vh;
+    }
+
+
+    #divConta
+    {
+        gap: 5px;
+        margin-top: 2em;
+    }
+
+
+
+    #conta
+    {
+        color: white;
+        font-size: 1.4em;
+    }
+
+    #cadastro
+    {
+        color: #F9EF9A;
+        text-decoration: none;
+        font-size: 1.4em;
+    }
+
+}
+
+
+
+
+
+
 

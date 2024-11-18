@@ -46,7 +46,7 @@
 
                     //colocando os dados dentro do elemento
                     p1.innerHTML = `${produto.nome}`;
-                    p2.innerHTML = `Descricao: ${produto.descricao}`;
+                    p2.innerHTML = `Descrição: ${produto.descricao}`;
                     p3.innerHTML = `Peso: ${produto.peso}g`;
 
                     card.appendChild(img); //coloca a imagem dentro da div

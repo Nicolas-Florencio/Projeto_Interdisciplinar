@@ -40,7 +40,6 @@
             <div id="barraLateral">
                 <ul>
                     <li><a href="usuario.php">Usuario</a></li>
-                    <li><a href="#">Favoritos</a></li>
                     <li><a href="../../back/logout.php">Sair</a></li>
                 </ul>
             </div>
