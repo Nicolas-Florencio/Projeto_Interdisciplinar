@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="../styles/cadastrar.css">
+    <link rel="icon" href="../images/logo.jpeg" type="image/x-icon">
       <!--Fonte escolhida-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +25,7 @@
 <body onload="cadastrarApi();">
 
     <div id="imgContainer">
-        <img src="../images/Logo.png" alt="Logo" id="logo">
+        <a href="index.php"><img src="../images/Logo.png" alt="Logo" id="logo"></a>
     </div>
     
     <h1>Cadastre-se</h1>

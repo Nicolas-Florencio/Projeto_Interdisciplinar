@@ -2,8 +2,14 @@ body
 {
     margin: 0;
     background-color: #001806;
-    background-image: url('../images/alimentos2.jpg');
     font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+
+    background-image: url('../images/alimentos2.jpg'); /* Imagem de fundo */
+    background-attachment: fixed; /* Fixa a imagem no fundo para criar o efeito */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-size: cover; /* Ajusta a imagem para cobrir a área */
 }
 
 .roboto-thin {
@@ -145,7 +151,7 @@ main
     height: auto;
     /*height: 41em;*/
     margin: 2.5em auto;
-    padding-bottom: 2.2em;
+    padding-bottom: 1.5rem;
 }
 
 .card
@@ -154,22 +160,36 @@ main
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
     border: 1px solid #929292;
     border-radius: 20px;
-    padding: 3em;
+    padding: 2rem;
+    
     height: auto;
-    width: auto;
+    width: 25vw;
+    /* max-height: 30vh; */
+        & img {
+            display: flex;
+            max-width:14vw;
+            max-height: 18vh;
+        }
 }
 
 #prod1
 {
     font-size: 2.2em;
+    margin: 0;
 }
 
 .prod
 {
     color: white;
-    font-size: 1.5em;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0.5rem;
+    width: 100%;
 }
 
 
@@ -345,6 +365,9 @@ footer
             font-weight: bolder;
             font-size: 1em;
         }
+        #resultado {
+            margin: 0.5rem;
+        }
 }
 
 
@@ -460,6 +483,9 @@ footer
         {
             font-weight: bolder;
             font-size: 1em;
+        }
+        #resultado {
+            margin: 0.5rem;
         }
 }
 
@@ -578,6 +604,12 @@ footer
             font-weight: bolder;
             font-size: 1em;
         }
+        .card {
+            max-width: 50vw;
+        }
+        #resultado {
+            margin: 0.5rem;
+        }
 }
 
 
@@ -586,7 +618,9 @@ footer
 {
 
     /*Barra de Navegação*/
-
+    body {
+        background-attachment: scroll; /* Desativa o efeito parallax */
+    }
 
     #barraPesq
     {
@@ -687,6 +721,17 @@ footer
         {
             font-weight: bolder;
             font-size: 1.2em;
+        }
+        .card {
+            width: 50vw;
+            padding: 0.5rem;
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        #resultado {
+            padding-top: 0.5rem;
         }
 }
 
@@ -798,6 +843,12 @@ footer
         {
             font-weight: bolder;
             font-size: 1.2em;
+        }
+        .card {
+            max-width: 100%;
+        }
+        #resultado {
+            margin: 0.5rem;
         }
 }
 
@@ -911,5 +962,11 @@ footer
             {
                 font-weight: bolder;
                 font-size: 1.2em;
+            }
+            .card {
+                max-width: 100%;
+            }
+            #resultado {
+                margin: 0.5rem;
             }
     }
