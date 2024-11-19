@@ -32,6 +32,13 @@ Esta é a versão 1.0 do projeto, apresentando melhorias de desenvolvimento do p
 
 Essa versão serve como um update da versão inicial do projeto. A partir deste ponto, o projeto evoluirá com novas funcionalidades utilizando de recursos aprendidos e utilizados em sala de aula.
 
+Abaixo os EndPoints da API que estão presentes nesta versão:
+- /buscar.php
+- /cadastrar.php
+- /logar.php
+- /favoritar.php (próxima versão)
+- /produto.php (próxima versão)
+
 ---
 
 > **Observação**: A versão 1.0 é a versão sem o front-end completo.
