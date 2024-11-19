@@ -36,7 +36,7 @@ function buscarProduto()
             $nulo = NULL;
             $comando->bindParam(":cod", $nulo);
         }
-        $nome = $busca . '%';
+        $nome = '%'. $busca . '%';
 
         $comando->bindParam(":nome", $nome);
         $comando->execute();

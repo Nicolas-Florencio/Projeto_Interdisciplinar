@@ -11,7 +11,7 @@
             $comando = $pdo->prepare($stmt);
 
             $email = htmlspecialchars($dados['email']);
-            $senha = htmlspecialchars($dados['senha']);
+            $senha = md5(htmlspecialchars($dados['senha']));
 
             $comando->bindParam(":email", $email);
             $comando->bindParam(":senha", $senha);
@@ -34,7 +34,7 @@
             header('Content-Type: application/json');
             http_response_code(401);
 
-            $mensagem = ['code' => $e->getCode(), 'mensagem' => $e->getMessage()];
+            $retorno = (["failed" => true, "Status" => "usuário ou senha inválido"]);
 
             return json_encode($mensagem);
         }

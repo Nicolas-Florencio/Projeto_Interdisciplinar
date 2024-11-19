@@ -27,7 +27,7 @@
 
                 $query = "INSERT INTO login(email, senha, cliente_idCliente) VALUES (:email, :senha, :id);";
                 $email = htmlspecialchars($dados['email']);
-                $senha = htmlspecialchars($dados['senha']);
+                $senha = md5(htmlspecialchars($dados['senha']));
                 
                 $comando = $pdo->prepare($query);
                 $comando->bindParam(":email", $email);

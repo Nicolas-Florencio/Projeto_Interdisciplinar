@@ -28,9 +28,15 @@ function logarApi() {
                 if(retorno.success && retorno.redirect) {
                     window.location.href = retorno.redirect;
                 }
-                else if(respostaApi.code == 403) {
-                    console.log("Usuario ou senha invalidos");
-                }
+            }
+            else {
+                console.log("Usuário ou senha inválido");
+
+                const resultadoDiv = document.getElementById('form'); //Pega div para inserir resultado
+                var p1 = document.createElement('p');
+                p1.setAttribute('class', 'erro');
+                p1.innerHTML = "Usuário ou senha inválidos";
+                resultadoDiv.appendChild(p1);
             }
         }
         catch(e) {

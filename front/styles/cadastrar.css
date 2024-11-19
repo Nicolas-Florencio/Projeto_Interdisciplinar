@@ -35,10 +35,10 @@ h1
 
 #form
 {
-    margin-top: 4em;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
     justify-content: center;
     align-items: center;
     height: 60vh;
@@ -47,12 +47,13 @@ h1
 .inputs
 {
     width: 500px;
-    height: 4.3vh;
+    height: 5vh;
     border-radius: 12px;
     border: none;
     background-color: #c5c2c2;
     padding-left: 1.2em;
-    font-size: 1.5em;
+    font-size: 1.3em;
+    padding-right: 1.2em;
 }
 
 .inputs::placeholder
@@ -63,20 +64,21 @@ h1
 #dataNasc
 {
     color: #e2e2e2;
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 
 #botao
 {
     width: 8em;
     font-size: 1.2em;
-    height: 55px;
+    height: 60px;
     background-color: #007507;
     color: white;
     border: 2px solid black;
     border-radius: 10px;
     margin-top: 1.5em;
     cursor: pointer;
+    padding: 1rem;
 }
 
 #botao:hover

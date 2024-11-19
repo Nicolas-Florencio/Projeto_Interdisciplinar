@@ -16,6 +16,12 @@ body
     font-family: "Roboto", sans-serif;
 }
 
+.erro {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 
 #imgLog
 {
