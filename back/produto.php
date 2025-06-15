@@ -19,6 +19,7 @@ catch(Exception $e) {
 include "buscar.php";
 
 $retornoBuscar = buscarProduto();
-//recebe um objeto de produto a ser retornado
+//recebe um objeto de produto a ser retornado pela api
+
 
 ?>
